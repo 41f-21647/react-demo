@@ -1,4 +1,3 @@
-
 # Installation des dépendances 
-Faire `npm install` pour installer les dépendances
+Après le `git clone`, faire `npm install` pour installer les dépendances
 
