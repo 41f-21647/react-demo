@@ -1,10 +1,11 @@
 import React from 'react';
+import Entete from '../Entete/Entete';
+import ListeProduit from '../ListeProduit/ListeProduit';
 import './App.css';
 
 export default class App extends React.Component{
   constructor(){
     super();  // Appel explicite au constructeur de la classe React.Component
-    
     this.message = "Ceci est un message";
   }
 
@@ -18,11 +19,13 @@ export default class App extends React.Component{
     let unParagraphe = <p>Allo</p>;
     return (
       <div className="App toto">
-        <h1>{toto}</h1>
+        <Entete />
+        <ListeProduit />
+        {/*<h1>{toto}</h1>
         {unParagraphe}
         {this.message}
         {this.salutation()}
-        {this.message}
+    {this.message}*/}
       </div>
     );
   }
