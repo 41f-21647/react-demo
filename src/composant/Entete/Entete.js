@@ -2,14 +2,19 @@ import React from 'react';
 import './Entete.css';
 
 export default class Entete extends React.Component{
-  constructor(){
-    super();  // Appel explicite au constructeur de la classe React.Component
- }
+ 
   render(){
     return (
-      <div className="entete">
-        <p>Entete</p>
-      </div>
+      <header className="entete">
+        <h1>Biero!</h1>
+        <nav>
+          <ul>
+            <li>Nav 1</li>
+            <li>Nav 2</li>
+            <li>Nav 3</li>
+          </ul>
+        </nav>
+      </header>
     );
   }
 }

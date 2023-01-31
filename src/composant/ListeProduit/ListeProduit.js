@@ -3,14 +3,14 @@ import './ListeProduit.css';
 
 export default class ListeProduit extends React.Component{
   constructor(){
-    super();  // Appel explicite au constructeur de la classe React.Component
+    super()
+    
   }
-
-
   render(){
     return (
       <div className="liste">
         <h1>liste</h1>
+        <p>Compteur : {this.props.compteur}</p>
       </div>
     );
   }

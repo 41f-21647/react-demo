@@ -7,26 +7,34 @@ export default class App extends React.Component{
   constructor(){
     super();  // Appel explicite au constructeur de la classe React.Component
     this.message = "Ceci est un message";
+    this.compteur = 0;
+    this.state = { 
+      compteur : 0
+    };
+
+
+    this.augmenteCompte = this.augmenteCompte.bind(this);
   }
 
-  salutation(){
-    this.message = "allo le monde";
-    return "Salut toi";
+  augmenteCompte(){
+    //this.state.compteur++;
+    this.setState({
+      compteur : this.state.compteur+1
+    })
+    
+    //this.compteur++;
+    console.log(this.state.compteur);
+   
   }
 
   render(){
-    let toto = "Allo Toto";
-    let unParagraphe = <p>Allo</p>;
     return (
-      <div className="App toto">
+      <section className='App'>
         <Entete />
-        <ListeProduit />
-        {/*<h1>{toto}</h1>
-        {unParagraphe}
-        {this.message}
-        {this.salutation()}
-    {this.message}*/}
-      </div>
+        <button onClick={this.augmenteCompte}>Clique ({this.state.compteur})</button>
+        <ListeProduit compteur={this.state.compteur} />
+
+      </section>
     );
   }
 }
