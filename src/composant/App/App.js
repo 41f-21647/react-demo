@@ -40,6 +40,7 @@ export default class App extends React.Component{
         <Entete seConnecter={this.connection} estConnecte={this.state.estConnecte} />
         <button onClick={this.augmenteCompte}>Clique ({this.state.compteur})</button>
         <ListeProduit estConnecte={this.state.estConnecte} compteur={this.state.compteur} />
+  
 
       </section>
     );

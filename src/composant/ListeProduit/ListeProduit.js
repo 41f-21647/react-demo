@@ -40,7 +40,7 @@ export default class ListeProduit extends React.Component{
 
     let aProduits = this.state.produits.map((unProduit, index)=>{
       //console.log(unProduit, index)
-      return (
+      return ( 
         //<Produit nom={unProduit.nom} id={unProduit.id_biere} description={unProduit.description} />
         <Produit estConnecte={this.props.estConnecte}  biere={unProduit} {...unProduit} /> // Choisir sa façon, pas les deux...
 
@@ -63,6 +63,7 @@ export default class ListeProduit extends React.Component{
           
         </section>
       </div>
+      
     );
   }
 }
