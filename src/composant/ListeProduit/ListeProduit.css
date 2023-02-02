@@ -1,0 +1,4 @@
+.mesProduits{
+    display: flex;
+    flex-wrap: wrap;
+}

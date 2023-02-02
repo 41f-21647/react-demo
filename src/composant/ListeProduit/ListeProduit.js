@@ -1,4 +1,5 @@
 import React from 'react';
+import Produit from '../Produit/Produit';
 import './ListeProduit.css';
 
 export default class ListeProduit extends React.Component{
@@ -37,14 +38,12 @@ export default class ListeProduit extends React.Component{
 
   render(){
 
-    let aProduits = this.state.produits.map((item, index)=>{
-      console.log(item, index)
+    let aProduits = this.state.produits.map((unProduit, index)=>{
+      //console.log(unProduit, index)
       return (
-  
-        <article>
-          <p>Nom : {item.nom}</p>
-          <p>Prix : {item.prix} $</p>
-        </article>
+        //<Produit nom={unProduit.nom} id={unProduit.id_biere} description={unProduit.description} />
+        <Produit  biere={unProduit} {...unProduit} /> // Choisir sa façon, pas les deux...
+
       );
     })
     console.log(aProduits)
