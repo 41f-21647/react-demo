@@ -12,7 +12,6 @@ export default class App extends React.Component{
       compteur : 0
     };
 
-
     this.augmenteCompte = this.augmenteCompte.bind(this);
   }
 
