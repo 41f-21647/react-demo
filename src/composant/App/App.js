@@ -9,10 +9,18 @@ export default class App extends React.Component{
     this.message = "Ceci est un message";
     this.compteur = 0;
     this.state = { 
-      compteur : 0
+      compteur : 0,
+      estConnecte : false
     };
 
     this.augmenteCompte = this.augmenteCompte.bind(this);
+    this.connection = this.connection.bind(this);
+  }
+
+  connection() {
+    this.setState({
+      estConnecte : !this.state.estConnecte
+    });
   }
 
   augmenteCompte(){
@@ -29,9 +37,9 @@ export default class App extends React.Component{
   render(){
     return (
       <section className='App'>
-        <Entete />
+        <Entete seConnecter={this.connection} estConnecte={this.state.estConnecte} />
         <button onClick={this.augmenteCompte}>Clique ({this.state.compteur})</button>
-        <ListeProduit compteur={this.state.compteur} />
+        <ListeProduit estConnecte={this.state.estConnecte} compteur={this.state.compteur} />
 
       </section>
     );

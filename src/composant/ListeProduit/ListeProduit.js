@@ -42,7 +42,7 @@ export default class ListeProduit extends React.Component{
       //console.log(unProduit, index)
       return (
         //<Produit nom={unProduit.nom} id={unProduit.id_biere} description={unProduit.description} />
-        <Produit  biere={unProduit} {...unProduit} /> // Choisir sa façon, pas les deux...
+        <Produit estConnecte={this.props.estConnecte}  biere={unProduit} {...unProduit} /> // Choisir sa façon, pas les deux...
 
       );
     })
