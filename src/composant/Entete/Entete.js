@@ -17,17 +17,28 @@ export default class Entete extends React.Component{
   render(){
     let btnConnecter = (this.props.estConnecte ? "Se déconnecter": "Se connecter")
     return (
-      <header className="entete">
-        <h1>Biero!</h1>
-        <button onClick={this.props.seConnecter}>{btnConnecter}</button>
+      <header className="App-header">
         <nav>
-          <ul>
-            <li>Nav 1</li>
-            <li>Nav 2</li>
-            <li>Nav 3</li>
-          </ul>
-        </nav>
-      </header>
+            <div className="top-nav">
+              <div className="barre">
+                <a className="logo" href="/">
+                  B<span>iero</span>
+                </a>
+                <span className="flex-spacer"></span>
+                <p className="menu-mobile"></p>
+              </div>
+              <span className="flex-spacer"></span>
+              <ul>
+                <li>
+                  <a href="/produit">Les produits</a>
+                </li>
+                          </ul>
+                          <section>
+                            <button onClick={this.props.seConnecter}>{btnConnecter}</button>
+                          </section>
+            </div>
+          </nav>
+        </header>
     );
   }
 }

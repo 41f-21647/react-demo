@@ -1,9 +1,4 @@
-.entete{
-    width: 100vw;
-    
-}
-nav li{
-    display: inline;
-    margin-left: 16px;
-    
+
+.pageActive {
+    font-weight: bold;
 }
